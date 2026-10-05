@@ -1,0 +1,68 @@
+dataset:
+  doi: "10.35097/emz24pksshndq468"
+  products: 10
+  evaluation: "leave-one-product-out"
+
+training:
+  seeds: [17, 29, 43]
+  epochs: 30
+  optimizer: "AdamW"
+  learning_rate: 0.002
+  weight_decay: 0.0001
+  dropout: 0.10
+  negatives_per_state: 8
+  base_seed: 20261003
+
+representation:
+  categorical_embedding_dim: 12
+  operation_input_dim: 67
+  operation_hidden_dim: 64
+  primary_pair_representation_dim: 257
+  includes_normalized_sequence_progress: true
+  capacity_matched_mlp_width: 88
+  gnn_hidden_dim: 32
+  edge_type_embedding_dim: 8
+  message_passing_layers: 2
+
+topology_controls:
+  permutation_ids: [1, 2, 3, 4, 5]
+  graph_shuffle_base: 20261119
+  seed_formula: "20261119 + 10007 * permutation_id + battery_id"
+  code_label: "shuffle / ShuffledGNN"
+  manuscript_label: "semantic-topology permutation / permuted-topology GNN"
+  no_edge_graph_degree: 0
+  retain_operation_local_true_degree_features: true
+
+sensitivity:
+  terminal_singleton:
+    enabled: true
+    retraining_required: false
+  no_progress:
+    enabled: true
+    remove_normalized_sequence_progress: true
+    pair_representation_dim: 256
+    capacity_matched_mlp_width: 88
+    same_lopo_folds: true
+    same_training_seeds: true
+    same_topology_permutations: true
+
+statistics:
+  primary_experimental_unit: "held-out battery product"
+  independent_products: 10
+  primary_endpoint: "Hits@1"
+  secondary_endpoints: ["Hits@3", "MRR"]
+  bootstrap_replicates: 20000
+  mechanism_bootstrap_seeds:
+    real_minus_permuted_hits1: 20261201
+    real_minus_noedge_hits1: 20261202
+    permuted_minus_noedge_hits1: 20261203
+  exact_sign_assignments: 1024
+  exact_test: "two-sided paired sign-flip"
+  holm_primary_hits1_contrasts:
+    - "real minus permuted"
+    - "real minus no-edge"
+    - "permuted minus no-edge"
+
+evaluation:
+  tie_tolerance: 1.0e-8
+  random_baseline: "analytical uniform ranking over state-specific candidate sets"

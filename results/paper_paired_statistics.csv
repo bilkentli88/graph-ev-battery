@@ -1,0 +1,13 @@
+metric,comparison,mean_difference,ci_low,ci_high,p_exact
+Hits@1,GNN - Capacity-matched MLP,0.103,0.079,0.126,0.00195
+Hits@3,GNN - Capacity-matched MLP,0.114,0.086,0.141,0.00195
+MRR,GNN - Capacity-matched MLP,0.097,0.074,0.120,0.00195
+Hits@1,Real - Permuted,-0.037,-0.070,-0.006,0.0605
+Hits@1,Real - No-edge,0.087,0.068,0.111,0.00195
+Hits@1,Permuted - No-edge,0.124,0.089,0.161,0.00195
+Hits@3,Real - Permuted,-0.041,-0.0858,0.0004,0.111
+Hits@3,Real - No-edge,0.099,0.076,0.125,0.00195
+Hits@3,Permuted - No-edge,0.140,0.094,0.187,0.00195
+MRR,Real - Permuted,-0.035,-0.071,-0.003,0.0977
+MRR,Real - No-edge,0.083,0.064,0.106,0.00195
+MRR,Permuted - No-edge,0.118,0.082,0.156,0.00195

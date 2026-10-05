@@ -1,0 +1,5 @@
+product_characteristic,real_minus_noedge,permuted_minus_noedge,real_minus_permuted
+Number of parts,0.547,0.073,0.219
+Unique part-pair links,0.799,0.177,0.238
+Graph density,-0.345,0.042,-0.224
+Sequence length,0.697,0.091,0.273

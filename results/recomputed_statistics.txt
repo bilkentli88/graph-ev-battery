@@ -1,0 +1,45 @@
+
+ANALYTICAL UNIFORM-RANDOM BASELINE
+Hits@1=0.029332, Hits@3=0.075379, MRR=0.089631
+
+CAPACITY CONTROL
+hits1: mean diff=0.102741, wins=10/10, 95% CI=(0.078820, 0.125630), exact p=0.001953125
+hits3: mean diff=0.113718, wins=10/10, 95% CI=(0.085629, 0.140887), exact p=0.001953125
+mrr: mean diff=0.097340, wins=10/10, 95% CI=(0.073887, 0.119569), exact p=0.001953125
+
+TOPOLOGY MECHANISM
+Hits@1 Real - Permuted: mean diff=-0.036730, wins=4/10, 95% CI=(-0.070370, -0.006081), exact p=0.060546875
+Hits@1 Real - No-edge: mean diff=0.087412, wins=10/10, 95% CI=(0.067159, 0.110613), exact p=0.001953125
+Hits@1 Permuted - No-edge: mean diff=0.124142, wins=10/10, 95% CI=(0.089209, 0.161563), exact p=0.001953125
+Holm-adjusted primary Hits@1 p-values:
+  Real - Permuted: 0.060546875
+  Real - No-edge: 0.005859375
+  Permuted - No-edge: 0.005859375
+hits3 Real - Permuted: mean diff=-0.040953, wins=3/10, exact p=0.111328125
+hits3 Real - No-edge: mean diff=0.099451, wins=10/10, exact p=0.001953125
+hits3 Permuted - No-edge: mean diff=0.140404, wins=10/10, exact p=0.001953125
+mrr Real - Permuted: mean diff=-0.035060, wins=4/10, exact p=0.097656250
+mrr Real - No-edge: mean diff=0.083370, wins=10/10, exact p=0.001953125
+mrr Permuted - No-edge: mean diff=0.118430, wins=10/10, exact p=0.001953125
+
+NO-PROGRESS SENSITIVITY
+RealGNN: Hits@1=0.293426, Hits@3=0.481103, MRR=0.428109
+FivePermutationMean: Hits@1=0.329481, Hits@3=0.520291, MRR=0.461954
+NoEdgesGNN: Hits@1=0.206859, Hits@3=0.384121, MRR=0.345793
+MatchedMLP: Hits@1=0.193109, Hits@3=0.367992, MRR=0.331829
+hits1 Real - Permuted: mean diff=-0.036056, wins=3/10, 95% CI=(-0.068789, -0.006544), exact p=0.054687500
+hits1 Real - No-edge: mean diff=0.086566, wins=10/10, 95% CI=(0.065631, 0.110368), exact p=0.001953125
+hits1 Permuted - No-edge: mean diff=0.122622, wins=10/10, 95% CI=(0.088039, 0.159462), exact p=0.001953125
+hits1 Real - MatchedMLP: mean diff=0.100317, wins=10/10, 95% CI=(0.079254, 0.122372), exact p=0.001953125
+hits3 Real - Permuted: mean diff=-0.039188, wins=3/10, 95% CI=(-0.085243, 0.002509), exact p=0.142578125
+hits3 Real - No-edge: mean diff=0.096982, wins=10/10, 95% CI=(0.068327, 0.126303), exact p=0.001953125
+hits3 Permuted - No-edge: mean diff=0.136169, wins=10/10, 95% CI=(0.088443, 0.184105), exact p=0.001953125
+hits3 Real - MatchedMLP: mean diff=0.113111, wins=10/10, 95% CI=(0.083244, 0.141174), exact p=0.001953125
+mrr Real - Permuted: mean diff=-0.033845, wins=2/10, 95% CI=(-0.069685, -0.001673), exact p=0.095703125
+mrr Real - No-edge: mean diff=0.082316, wins=10/10, 95% CI=(0.060723, 0.105413), exact p=0.001953125
+mrr Permuted - No-edge: mean diff=0.116160, wins=10/10, 95% CI=(0.078942, 0.154393), exact p=0.001953125
+mrr Real - MatchedMLP: mean diff=0.096280, wins=10/10, 95% CI=(0.073370, 0.118687), exact p=0.001953125
+Holm-adjusted no-progress Hits@1 topology p-values:
+  Real - Permuted: 0.054687500
+  Real - No-edge: 0.005859375
+  Permuted - No-edge: 0.005859375
